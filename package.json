@@ -1,0 +1,43 @@
+{
+  "name": "portfolio-be",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalisaNkevin/Portfolio-BE.git"
+  },
+  "keywords": [],
+  "author": "KALISA NGBAO KEVIN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kalisaNkevin/Portfolio-BE/issues"
+  },
+  "homepage": "https://github.com/kalisaNkevin/Portfolio-BE#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.2",
+    "eslint": "^8.23.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0",
+    "prettier": "^2.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/register": "^7.18.9",
+    "@babel/runtime": "^7.19.0",
+    "babel-core": "^6.26.3",
+    "babel-node": "^0.0.1-security",
+    "babel-register": "^6.26.0",
+    "nodemon": "^2.0.19"
+  }
+}
