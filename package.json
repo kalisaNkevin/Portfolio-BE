@@ -11,7 +11,7 @@
     "start:prod": "cross-env NODE_ENV=production nodemon --exec babel-node ./src/index.js",
     "test": " NODE_ENV=test  mocha ./src/tests --exit",
     "coverage": "c8 --r html -r  -x 'public/**' -x 'coverage/**' --check-coverage npm test",
-    "format": "prettier --write \"src/**/*.js\" \"test/**/*.js\""
+    "format": "prettier --write \"src/**/*.js\" \"public/**/*.js\""
   },
   "repository": {
     "type": "git",
