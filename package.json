@@ -7,7 +7,7 @@
   "scripts": {
 
     "build": "babel ./src/index.js -d build",
-    "start": "node .src/index.js",
+    "start": "node ./src/index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
     "start:prod": "cross-env NODE_ENV=production nodemon --exec babel-node ./src/index.js",
     "test": " NODE_ENV=test  mocha ./src/tests --exit",
