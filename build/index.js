@@ -10,7 +10,7 @@ app.listen(port, () => {
 mongoose.connect(process.env.DATABASE_NAME).then(() => {
   console.log('|******Portfolio Backend Database connected successful!!!******|');
 }).catch(error => {
-  console.log('Portfolio backend Database Not Connected');
+  console.log('Portfolio Backend Database Is Not Connected');
   console.log({
     Error_Message: error
   });

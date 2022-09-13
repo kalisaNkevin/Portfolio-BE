@@ -10,7 +10,7 @@
     "start:prod": "cross-env NODE_ENV=production nodemon --exec babel-node index.js",
     "test": " NODE_ENV=test  mocha ./src/tests --exit",
     "coverage": "c8 --r html -r  -x 'public/**' -x 'coverage/**' --check-coverage npm test",
-    "coveralls": "nyc  --reporter=text-lcov --reporter=lcov npm run test | coveralls",
+    "coveralls": "nyc npm run test | coveralls",
     "format": "prettier --write \"src/**/*.js\" \"public/**/*.js\""
    
   },
