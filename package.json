@@ -64,8 +64,7 @@
   "nyc": {
     "all": true,
     "include": [
-      "src/**/*.js",
-      "test/*.js"
+      "src/**/*.js"
     ],
     "reporter": [
       "html",
