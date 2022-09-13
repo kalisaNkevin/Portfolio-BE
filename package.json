@@ -10,7 +10,9 @@
     "start:prod": "cross-env NODE_ENV=production nodemon --exec babel-node index.js",
     "test": " NODE_ENV=test  mocha ./src/tests --exit",
     "coverage": "c8 --r html -r  -x 'public/**' -x 'coverage/**' --check-coverage npm test",
+    "coveralls": "nyc  --reporter=text-lcov --reporter=lcov npm run test | coveralls",
     "format": "prettier --write \"src/**/*.js\" \"public/**/*.js\""
+   
   },
   "repository": {
     "type": "git",
@@ -32,11 +34,13 @@
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "cors": "^2.8.5",
+    "coveralls": "^3.1.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.2",
     "eslint": "^8.23.1",
     "express": "^4.18.1",
     "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
     "path": "^0.12.7",
     "prettier": "^2.7.1",
     "swagger-jsdoc": "^6.2.5",
@@ -56,5 +60,16 @@
     "babel-register": "^6.26.0",
     "mongoose": "^6.6.0",
     "nodemon": "^2.0.19"
-  }
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.js",
+      "test/*.js"
+    ],
+    "reporter": [
+      "html",
+      "text",
+      "text-lcov"
+    ]}
 }
