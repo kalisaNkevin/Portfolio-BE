@@ -9,8 +9,9 @@
     "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node index.js",
     "start:prod": "cross-env NODE_ENV=production nodemon --exec babel-node index.js",
     "test": " NODE_ENV=test  mocha ./src/tests --exit",
-    "coverage": "c8 --r html -r  -x 'public/**' -x 'coverage/**' --check-coverage npm test",
+    "coverage": "c8 --r html -r  -x 'public/**' -x 'coverage/**' --check-coverage npm test ",
     "format": "prettier --write \"src/**/*.js\" \"public/**/*.js\""
+  
    
   },
   "repository": {
@@ -59,5 +60,23 @@
     "babel-register": "^6.26.0",
     "mongoose": "^6.6.0",
     "nodemon": "^2.0.19"
+  },
+  "nyc": {
+    "all": true,
+    "check-coverage": true,
+    "include": [
+      "src/**/*.js"
+    
+    ],
+    "reporter": [
+      "html",
+      "text",
+      "text-lcov"
+    ],
+    "exclude": [
+      "node_modules/*",
+      "coverage/*"
+  
+    ]
   }
 }
